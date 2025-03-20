@@ -1,0 +1,134 @@
+@import "tailwindcss";
+:root {
+  --font-h1: 100px;
+  --font-h2: 50px;
+  --font-h3: 30px;
+  --font-h4: 24px;
+  --font-h5: 18px;
+  --font-h6: 16px;
+  --font-body: 16px;
+
+  --primary-gradient: linear-gradient(to right, #27628C, #93B2F4);
+
+  --background: #F1F0EB;
+}
+
+/* For screens smaller than 1440px */
+@media (max-width: 1440px) {
+  :root {
+    --font-h1: 72px;
+    --font-h2: 38px;
+    --font-h3: 24px;
+    --font-h4: 20px;
+    --font-h5: 14px;
+    --font-h6: 13px;
+    --font-body: 14px;
+  }
+}
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  :root {
+    --font-h1: 48px;
+    --font-h2: 28px;
+    --font-h3: 20px;
+    --font-h4: 18px;
+    --font-h5: 12px;
+    --font-h6: 11px;
+    --font-body: 13px;
+  }
+}
+
+/* For screens smaller than 768px (Mobile) */
+@media (max-width: 768px) {
+  :root {
+    --font-h1: 36px;
+    --font-h2: 22px;
+    --font-h3: 18px;
+    --font-h4: 16px;
+    --font-h5: 10px;
+    --font-h6: 9px;
+    --font-body: 12px;
+  }
+}
+/* Set the default font to Jost */
+html, body {
+  font-family: var(--font-jost), sans-serif;
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+/* Set font sizes for heading tags */
+h1 {
+  font-size: var(--font-h1);
+  font-family: var(--font-bebas-neue), sans-serif; /* Example: Use Bebas Neue for headings */
+}
+
+h2 {
+  font-size: var(--font-h2);
+  font-family: var(--font-bebas-neue), sans-serif;
+}
+
+h3 {
+  font-size: var(--font-h3);
+  font-family: var(--font-bebas-neue), sans-serif;
+}
+
+h5 {
+  font-size: var(--font-h5);
+}
+
+h6 {
+  font-size: var(--font-h6);
+}
+
+/* Create the BlueGradient class */
+.BlueGradient {
+  background: var(--primary-gradient);
+}
+
+.BlueTextGradient {
+  background-image: var(--primary-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Helper classes for font usage */
+.font-jost {
+  font-family: var(--font-jost), sans-serif;
+}
+
+.font-bebas {
+  font-family: var(--font-bebas-neue), sans-serif;
+}
+/* Small devices */
+@media (min-width: 640px) {
+  .navbar {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+  .navbar {
+    width: 85%;
+    max-width: 800px;
+  }
+}
+
+/* Large devices - closest to your Figma design */
+@media (min-width: 1024px) {
+  .navbar {
+    width: calc(1080px - 600px); /* Your design width minus both margins */
+    max-width: 80%;
+  }
+}
+
+.BoxShadow {
+  box-shadow: rgba(3, 3, 13, 0.03) 0px 1px 2px 0px, rgba(3, 3, 13, 0.05) 0px 1px 3px 0px, rgba(255, 255, 255, 0.3) 0px 1px 0px 0px inset,
+    -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    0px 8px 28px 0 rgba(34, 33, 81, 0.25);
+}
